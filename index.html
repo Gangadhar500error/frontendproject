@@ -1,0 +1,545 @@
+5<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS Basic Setup</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#1F2937',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                   <!-- Logo -->
+      <div class="flex items-center">
+        <a href="#" class="flex items-center space-x-2">
+  <img src="https://demo.tailgrids.com/templates/agency/build/src/assets/images/logo/logo.svg" alt="Logo" class="h-10 w-auto" />
+  
+</a>
+        
+      </div>
+                
+                   <!-- Navigation Menu -->
+      <div class="hidden md:flex flex-1 justify-center space-x-8 text-black">
+        <a href="#" class="text-gray-700 hover:text-primary transition-colors">Home</a>
+        <a href="#" class="text-gray-700 hover:text-primary transition-colors">About us</a>
+        <a href="#" class="text-gray-700 hover:text-primary transition-colors">Features</a>
+        <a href="#" class="text-gray-700 hover:text-primary transition-colors">Pricing</a>
+        <a href="#" class="text-gray-700 hover:text-primary transition-colors">Support</a>
+      </div>
+                     <!-- Right Side Button -->
+         <div class="hidden md:block">
+        <button class="bg-black text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 hover:text-black transition-colors">
+          Get Started
+        </button>
+         </div>
+
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button class="text-gray-700 hover:text-primary">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+  
+     <!-- Hero Section -->
+<section class="bg-white text-black">
+  <div class="container mx-auto px-6 py-20">
+    <div class="flex flex-col md:flex-row items-center gap-12">
+      
+      <!-- Hero Content -->
+      <div class="md:w-1/2">
+        <h1 class="text-4xl md:text-6xl font-medium mb-6">
+          Build beautiful website with TailGrids blocks.
+        </h1>
+        <p class="text-xl mb-8 text-gray-600">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at egestas tortor. Morbi sed odio id purus pellentesque iaculis nulla facilisi.
+        </p>
+        <p class="text-black text-lg font-medium mb-6">
+          Subscribe to get notified when we launch 🎉
+        </p>
+        
+        <!-- Subscription Form -->
+        <form class="flex flex-col sm:flex-row gap-4">
+          <input 
+            type="email" 
+            placeholder="Enter your email" 
+            class="px-4 py-3 w-full sm:w-auto rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+          />
+          <button 
+            type="submit" 
+            class="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition"
+          >
+            Notify Me!
+          </button>
+        </form>
+      </div>
+
+      <!-- Image Layout -->
+      <div class="md:w-1/2 grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- Left: Tall Image -->
+        <div>
+          <img 
+            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" 
+            alt="Developers working on code" 
+            class="w-full h-full object-cover "
+          />
+        </div>
+
+        <!-- Right: Two stacked images -->
+        <div class="grid grid-rows-2 gap-6">
+          <img 
+            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" 
+            alt="Team meeting at a cafe" 
+            class="w-full h-full object-cover "
+          />
+          <img 
+            src="https://images.unsplash.com/photo-1552581234-26160f608093" 
+            alt="Whiteboard brainstorming" 
+            class="w-full h-full object-cover "
+          />
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  
+    <!-- BRAND SECTION -->
+<section class="py-20 bg-gray-100">
+  <div class="container mx-auto px-6">
+
+    <!-- Row: Heading Left, Logos Right -->
+    <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+
+      <!-- Heading -->
+      <div class="text-left">
+        <h2 class="text-2xl font-bold leading-snug">
+          Tailwind CSS UI<br>Components for Modern Web Apps
+        </h2>
+      </div>
+
+      <!-- Brand Logos -->
+      <div class="flex flex-wrap items-center gap-8 justify-center md:justify-end">
+        <img src="https://demo.tailgrids.com/templates/agency/build/src/assets/images/brands/graygrids.svg" 
+             alt="Brand 1" 
+             class="h-10 object-contain opacity-70 hover:opacity-100 transition" />
+        <img src="https://demo.tailgrids.com/templates/agency/build/src/assets/images/brands/lineicons.svg" 
+             alt="Brand 2" 
+             class="h-10 object-contain opacity-70 hover:opacity-100 transition" />
+        <img src="https://demo.tailgrids.com/templates/agency/build/src/assets/images/brands/ayroui.svg" 
+             alt="Brand 3" 
+             class="h-10 object-contain opacity-70 hover:opacity-100 transition" />
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- features -->
+<section class="py-16 bg-white">
+  <div class="max-w-5xl mx-auto px-4">
+    <h5 class="text-center text-blue-600 font-medium">Core Features</h5>
+    <h2 class="text-center text-3xl font-bold mt-2">Our Awesome Features</h2>
+    <p class="text-center text-gray-500 mt-3 mb-12">
+      There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+      
+      <!-- Feature 1 -->
+      <div class="text-center relative">
+        <div class="bg-blue-600 text-white w-24 h-24 flex items-center justify-center rounded-lg mx-auto">
+          <!-- Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-smile-icon lucide-smile"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" x2="9.01" y1="9" y2="9"/><line x1="15" x2="15.01" y1="9" y2="9"/></svg>
+        </div>
+        <h5 class="mt-4 font-semibold">Easy To Use</h5>
+        <p class="text-gray-500 text-sm mt-2">Lorem ipsum dolor sit amet sitim consectetur elit. Vestibulum tincidunt rutrum.</p>
+        <!-- Dotted line -->
+        <div class="hidden md:block absolute top-10 right-[-20px] w-[40px] border-t-2 border-dashed border-blue-700"></div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="text-center relative">
+        <div class="bg-blue-600 text-white w-24 h-24 flex items-center justify-center rounded-lg mx-auto">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h8m-8 4h8" />
+          </svg>
+        </div>
+        <h5 class="mt-4 font-semibold">Awesome Design</h5>
+        <p class="text-gray-500 text-sm mt-2">Lorem ipsum dolor sit amet sitim consectetur elit. Vestibulum tincidunt rutrum.</p>
+        <div class="hidden md:block absolute top-10 right-[-20px] w-[40px] border-t-2 border-dashed border-blue-700"></div>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="text-center relative">
+        <div class="bg-blue-600 text-white w-24 h-24 flex items-center justify-center rounded-lg mx-auto">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v16a1 1 0 01-1 1H4a1 1 0 01-1-1V4z" />
+          </svg>
+        </div>
+        <h5 class="mt-4 font-semibold">Easy To Customize</h5>
+        <p class="text-gray-500 text-sm mt-2">Lorem ipsum dolor sit amet sitim consectetur elit. Vestibulum tincidunt rutrum.</p>
+        <div class="hidden md:block absolute top-10 right-[-20px] w-[40px] border-t-2 border-dashed border-blue-700"></div>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="text-center">
+        <div class="bg-blue-600 text-white w-24 h-24 flex items-center justify-center rounded-lg mx-auto">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M16 10h.01M12 14h.01M12 14v4m0-4l2 2m-2-2l-2 2" />
+          </svg>
+        </div>
+        <h5 class="mt-4 font-semibold">Any Time Support</h5>
+        <p class="text-gray-500 text-sm mt-2">Lorem ipsum dolor sit amet sitim consectetur elit. Vestibulum tincidunt rutrum.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- about section -->
+
+<section class="py-16 bg-white">
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+
+    <!-- Left Column: Image with Overlay -->
+    <div class="relative">
+      <img src="https://demo.tailgrids.com/templates/agency/build/src/assets/images/about/about-08/image-01.jpg" alt="Team" class="rounded-lg">
+      
+      <!-- Blue Overlay -->
+      <div class="absolute bottom-0 left-16 bg-blue-600 text-white py-10 px-16 rounded-tr-[40px] rounded-bl-lg text-2xl font-bold shadow-lg">
+        We make clean<br> & professional design
+      </div>
+    </div>
+
+    <!-- Right Column: Text Content -->
+    <div>
+      <h5 class="text-gray-600 font-medium text-xl">What We Do!</h5>
+      <h2 class="text-5xl font-bold mt-4">
+        We develop & create awesome website<span class="text-black">.</span>
+      </h2>
+
+      <!-- Feature 1 -->
+      <div class="mt-8">
+        <div class="flex items-start gap-6">
+          <span class="text-blue-600 font-bold text-xl">01</span>
+          <div>
+            <h4 class="font-bold text-2xl">Refreshing Design</h4>
+            <p class="text-gray-500 text-sm mt-1">
+              Clean, refreshing and high-quality that gives positive vibes. 
+              Figma source file also provided so you can use to prototype, experiment, play or adjust.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="mt-4">
+        <div class="flex items-start gap-6">
+          <span class="text-blue-600 font-bold text-xl">02</span>
+          <div>
+            <h4 class="font-bold text-2xl">Developer Friendly</h4>
+            <p class="text-gray-500 text-sm mt-1">
+              Developer experience is our #1 priority, entire library is designed, coded, and organized in a way that saves hundreds of hours and increases productivity.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- our team section -->
+
+
+
+    <section class="py-16 bg-gray-100">
+  <div class="container mx-auto px-4">
+    <h5 class="text-center text-2xl text-blue-600 font-medium">our team members</h5>
+    
+    <h2 class="text-4xl font-bold text-center mb-12">Our Creative Team</h2>
+    <p class="text-center text-black mt-3 mb-12">
+      There are many variations of passages of Lorem Ipsum available but <br>the majority have suffered alteration in some form.
+
+    </p>
+
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      
+      <!-- Team Member 1 -->
+      <div class="bg-white p-6 rounded-lg shadow-md text-center">
+        <img src="https://demo.tailgrids.com/templates/agency/build/src/assets/images/team/image-07/image-01.png" alt="Team Member" class="w-24 h-24 mx-auto rounded-full mb-4 object-cover">
+        <h3 class="text-xl font-semibold">Alex Johnson</h3>
+        <p class="text-gray-500 mb-2">UI/UX Designer</p>
+        <div class="flex justify-center gap-4 text-gray-400 mt-3">
+          <a href="#"><i class="fab fa-twitter hover:text-blue-400"></i></a>
+          <a href="#"><i class="fab fa-linkedin hover:text-blue-600"></i></a>
+        </div>
+      </div>
+
+       
+      <!-- Team Member 2 -->
+      <div class="bg-white p-6 rounded-lg shadow-md text-center">
+        <img src="https://demo.tailgrids.com/templates/agency/build/src/assets/images/team/image-07/image-02.png" alt="Team Member" class="w-24 h-24 mx-auto rounded-full mb-4 object-cover">
+        <h3 class="text-xl font-semibold">Alex Johnson</h3>
+        <p class="text-gray-500 mb-2">UI/UX Designer</p>
+        <div class="flex justify-center gap-4 text-gray-400 mt-3">
+          <a href="#"><i class="fab fa-twitter hover:text-blue-400"></i></a>
+          <a href="#"><i class="fab fa-linkedin hover:text-blue-600"></i></a>
+        </div>
+      </div>
+
+       
+      <!-- Team Member 3 -->
+      <div class="bg-white p-6 rounded-lg shadow-md text-center">
+        <img src="https://demo.tailgrids.com/templates/agency/build/src/assets/images/team/image-07/image-03.png" alt="Team Member" class="w-24 h-24 mx-auto rounded-full mb-4 object-cover">
+        <h3 class="text-xl font-semibold">Alex Johnson</h3>
+        <p class="text-gray-500 mb-2">UI/UX Designer</p>
+        <div class="flex justify-center gap-4 text-gray-400 mt-3">
+          <a href="#"><i class="fab fa-twitter hover:text-blue-400"></i></a>
+          <a href="#"><i class="fab fa-linkedin hover:text-blue-600"></i></a>
+        </div>
+      </div>
+ 
+      <!-- Team Member 4 -->
+      <div class="bg-white p-6 rounded-lg shadow-md text-center">
+        <img src="https://demo.tailgrids.com/templates/agency/build/src/assets/images/team/image-07/image-04.png" alt="Team Member" class="w-24 h-24 mx-auto rounded-full mb-4 object-cover">
+        <h3 class="text-xl font-semibold">Alex Johnson</h3>
+        <p class="text-gray-500 mb-2">UI/UX Designer</p>
+        <div class="flex justify-center gap-4 text-gray-400 mt-3">
+          <a href="#"><i class="fab fa-twitter hover:text-blue-400"></i></a>
+          <a href="#"><i class="fab fa-linkedin hover:text-blue-600"></i></a>
+        </div>
+      </div>
+
+
+    
+
+    </div>
+  </div>
+</section>
+
+<!-- PRICING SECTION -->
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-left mb-12">Pricing Plans</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 items-start">
+
+      <!-- Plan 1 -->
+      <div class="border p-8 rounded-lg shadow hover:shadow-lg transition flex flex-col mt-6 h-[520px] flex flex-direction-row items-center justify-center">
+        <h3 class="text-xl font-semibold mb-2">Basic</h3>
+        <p class="text-4xl font-bold text-blue-600 mb-4">
+          $19<span class="text-lg font-normal text-gray-500">/mo</span>
+        </p>
+        <ul class="mb-6 space-y-2 text-gray-600 flex-1">
+          <li>✔ 1 Project</li>
+          <li>✔ Basic Support</li>
+          <li>✔ Limited Features</li>
+        </ul>
+        <button class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">
+          Choose Plan
+        </button>
+      </div>
+
+      <!-- Plan 2 (Overlapping Center) -->
+      <div class="relative border p-10 rounded-lg shadow-xl bg-blue-600 flex flex-col transform hover:scale-105 transition -mt-12 z-20 h-[700px]">
+        <span class="absolute top-0 right-0 bg-blue-600 text-white text-xs px-3 py-1 rounded-bl-lg">
+          Most Popular
+        </span>
+        <h3 class="text-xl font-semibold mb-2">Pro</h3>
+        <p class="text-4xl font-bold text-white mb-4">
+          $49<span class="text-lg font-normal text-gray-100">/mo</span>
+        </p>
+        <ul class="mb-6 space-y-2 text-gray-100 flex-1">
+          <li>✔ 5 Projects</li>
+          <li>✔ Priority Support</li>
+          <li>✔ Advanced Features</li>
+          <li>✔ Free Updates</li>
+          <li>✔ Access to Beta Features</li>
+        </ul>
+        <button class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">
+          Choose Plan
+        </button>
+      </div>
+
+      <!-- Plan 3 -->
+      <div class="border p-8 rounded-lg shadow hover:shadow-lg transition flex flex-col mt-6 h-[520px]">
+        <h3 class="text-xl font-semibold mb-2">Premium</h3>
+        <p class="text-4xl font-bold text-blue-600 mb-4">
+          $99<span class="text-lg font-normal text-gray-500">/mo</span>
+        </p>
+        <ul class="mb-6 space-y-2 text-gray-600 flex-1">
+          <li>✔ Unlimited Projects</li>
+          <li>✔ 24/7 Support</li>
+          <li>✔ All Features</li>
+        </ul>
+        <button class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">
+          Choose Plan
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!--  image-->
+<section class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8 p-6 bg-white shadow-lg rounded-lg">
+  
+  <!-- Image -->
+  <div class="w-full md:w-1/3">
+    <img src="https://demo.tailgrids.com/templates/agency/build/src/assets/images/testimonials/testimonial-01/image-01.jpg" alt="Profile"
+         class="w-full h-full object-cover rounded-lg">
+  </div>
+
+  <!-- Text Content -->
+  <div class="w-full md:w-2/3">
+    <!-- Logo & Name -->
+    <h2 class="text-xl font-semibold flex items-center gap-2">
+      <span class="text-purple-600 font-bold text-2xl">∞</span> Lineicons
+    </h2>
+
+    <!-- Quote -->
+    <p class="mt-3 text-gray-600 italic">
+      File storage made easy – including powerful features you won't find anywhere else. 
+      Whether you're.
+    </p>
+
+    <!-- Person Info -->
+    <div class="mt-4">
+      <p class="font-semibold text-lg">Larry Diamond</p>
+      <p class="text-gray-500 text-sm">Chief Executive Officer.</p>
+    </div>
+
+    <!-- Navigation Arrows -->
+    <div class="flex items-center gap-4 mt-6">
+      <!-- Prev Button -->
+      <button class="p-2 border rounded-full hover:bg-gray-100 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" 
+             class="w-5 h-5" 
+             fill="none" 
+             viewBox="0 0 24 24" 
+             stroke="currentColor" 
+             stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+
+      <!-- Next Button -->
+      <button class="p-2 border rounded-full hover:bg-gray-100 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" 
+             class="w-5 h-5" 
+             fill="none" 
+             viewBox="0 0 24 24" 
+             stroke="currentColor" 
+             stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+</section>
+``
+<!-- Footer -->
+<footer class="bg-white text-black">
+  <div class="container mx-auto px-6 py-12">
+    <div class="grid md:grid-cols-2 gap-8">
+      
+      <!-- Left Side: Company Info + Quick Links -->
+      <div class="grid sm:grid-cols-2 gap-8">
+        
+        <!-- Company Info -->
+        <div>
+        
+  
+  <img src="https://demo.tailgrids.com/templates/agency/build/src/assets/images/logo/logo.svg" alt="Logo" class="h-19 w-auto" />
+  
+
+          <p class="text-black mb-4">
+            Creating amazing digital experiences with modern web technologies. 
+            We focus on performance, accessibility, and user experience.
+          </p>
+        </div>
+        
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-lg text-black font-semibold mb-4">Company</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-black hover:text-blue-600">Home</a></li>
+            <li><a href="#" class="text-black hover:text-blue-600">About</a></li>
+            <li><a href="#" class="text-black hover:text-blue-600">Services</a></li>
+            <li><a href="#" class="text-black hover:text-blue-600">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Right Side: Contact + Subscribe -->
+      <div class="grid sm:grid-cols-2 gap-8">
+        
+        <!-- Contact Info -->
+        <div>
+          <h4 class="text-lg text-black font-semibold mb-4">Contact</h4>
+          <!-- Contact Info -->
+         <div>
+
+          <ul class="space-y-2">
+            <li><a href="#" class="text-black hover:text-blue-600">client support</a></li>
+            <li><a href="#" class="text-black hover:text-blue-600">latest news</a></li>
+            <li><a href="#" class="text-black hover:text-blue-600">company story</a></li>
+            <li><a href="#" class="text-black hover:text-blue-600">pricing packages</a></li>
+          </ul>
+        </div>
+      </div>
+        <!-- Subscribe -->
+        <div>
+          <h2 class="text-2xl text-black mb-4">Subscribe</h2>
+          <form class="flex flex-col gap-3">
+            <input type="email" 
+                   placeholder="Enter your email" 
+                   class="px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            <button type="submit" 
+                    class="bg-blue-600 px-6 py-3 rounded-lg text-white font-medium hover:bg-blue-700 transition">
+              Subscribe
+            </button>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- Bottom Footer -->
+    <div class="border-t border-gray-300 mt-8 pt-8 text-center text-gray-800">
+      <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
